@@ -18,6 +18,7 @@
 body{
     margin: 0;
     font-family: 'Barlow', sans-serif;
+    
     }
 
 main{
@@ -26,7 +27,7 @@ main{
 
 header{
     background-image: url('./images/mobile/image-header.jpg');
-    background-position: center;
+    background-position:center;
     background-size:cover;
     padding: 30px 20px;
     height: 505px;
@@ -36,7 +37,8 @@ header{
 .links{
     display: flex;
     justify-content: space-between;
-}
+    
+    }
 
 .nav{
     display: none;
@@ -50,15 +52,68 @@ header h1{
     color: var(--white);
     text-align: center;
     margin: 60px auto 50px;
+    display: none;    
+}
+
+.creatives{
+    display: block;
 }
 
 .arrow{
-    display: block;
+    display: none;
     margin: auto;
+     }
+
+.arrowVisible{
+    display: block;
+}     
+
+.menu ul{
+    display: block;
+}
+
+.menu{
+    position: absolute;
+	top: calc(15% + 3rem);
+	left: 20px;
+	width: 90%;
+	background: white;
+	padding: 2rem 2rem 2.5rem;
+	text-align: center;
+	box-shadow: 0 5px 10px rgba(0 0 0 / 0.25);	
+	transition: transform 200ms;
+	pointer-events: none;
+	transform-origin: top;
+    line-height: 4;    
+}
+
+.menu::before {
+	content: "";
+	position: absolute;
+	display: block;
+	top: -29px;
+	right: 0;
+	width: 30px;
+	height: 30px;
+	background: var(--white);
+	clip-path: polygon(100% 0, 0% 100%, 100% 100%);
     }
 
+.menuContact{
+    background-color: var(--yellow);
+    border-radius: 30px;    
+    max-width: 50%;
+    margin: auto;
+    height: 60px;
+    text-transform: uppercase;
+} 
+
+.menuVisible{
+    display: none;
+}
+
 .area h1{
-   padding: 50px 30px 0;
+   padding: 30px 30px 0;
    font-family: 'Fraunces', serif;
    font-size: 35px;
    font-weight: 900;
@@ -90,16 +145,17 @@ header h1{
     height: 0px;
     font-family: 'Fraunces', serif;
     color: black;
-    padding: 20px 30px 15px;
+    padding: 20px 30px 8px;
 }
 
 hr{
     width: 150px;
-    margin: 0 auto 70px;
+    margin: 5px auto 70px;
     border: none;
     border-radius: 5px;
     height: 10px;    
     opacity: 0.3;
+    cursor: pointer;
 }
 
 .transform{
@@ -234,9 +290,15 @@ ul{
     display: flex;
     justify-content: space-around;
     padding: 80px;
+    color: var(--darkDesaturatedCyanGraphicDesignText);
 }
 
-@media(min-width:600px){
+.icono:hover{
+    color: var(--white);
+    cursor: pointer;
+}
+
+@media(min-width:700px){
     header{
         background-image: url('./images/desktop/image-header.jpg');
         background-position: center;
@@ -267,6 +329,11 @@ ul{
         font-size: 10px;
     }
 
+    .contact:hover{
+        background-color: rgb(44, 186, 241);
+        color: var(--white);
+    }
+
     li:hover{
         color: black;
         text-transform: uppercase;
@@ -277,29 +344,66 @@ ul{
         font-size: 10px;
         cursor: pointer;
     }
+
+    .menu{
+        display: none;
+    }
     
     .area{
         display: flex;
+        align-items: center;
     }
 
     .reverse{
         flex-direction: row-reverse;
     }
 
+    .area h1{
+        font-size: 20px;
+        width: 50%;
+    }
+
+    .area p{
+        font-size: 10px;
+        width: 70%;
+    }
+
     .area img{
         width: 50%;
     }
 
+    hr{
+        margin: 0 auto;
+    }
+
     .graphic h1{
         margin: 0 auto;
+        font-size: 16px;
             }
 
+    .graphic p{
+        font-size: 10px;
+        width: 60%;
+    }        
+
     .graphic{
+        background-image: url('./images/desktop/image-graphic-design.jpg');
         width: 50%;
     }        
 
     .photo{
-        width: 50%;
+        width: 50%; 
+        background-image: url('./images/desktop/image-photography.jpg');       
+    }
+
+    .photo h1{
+        font-size: 16px;
+    }
+
+    .photo p{
+        font-size: 10px;
+        width: 60%;
+        margin: auto;
     }
 
     .design{
@@ -310,22 +414,58 @@ ul{
         display: flex;
     }
 
+    .testimonials{
+        padding: 20px 20px 50px;
+    }
+
+    .testimonials h1{
+        padding: 40px 20px 10px;
+        font-size: 14px;
+    }
+
+    .testimonials img{
+        margin: 20px auto 0;
+        width: 40px;
+        height: 40px;
+    }
+
+    .testi{
+        font-size: 10px;
+    }
+
+    .name{
+        font-size: 10px;
+    }
+
+    .charge{
+        font-size: 10px;
+    }
+
     .products img{
         width: 25%;
         height: 25%;
     }
 
     .logoFooter{
-        width: 30%;
-        height: 30%;
+        width: 22%;
+        height: 22%;
     }
 
     ul{
-        width: 30%;
+        width: 40%;
+    }
+
+    .listFooter li{
+        color: var(--darkDesaturatedCyanGraphicDesignText);
     }
 
     .social{
         width: 30%;
         margin: auto;
+    }
+
+    .social img{
+        width: 10px;
+        height: 10px;
     }
 }

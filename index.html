@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css">
   <title>Frontend Mentor | Sunnyside agency landing page</title>
-
+  <script src="https://kit.fontawesome.com/8b6237c08b.js" crossorigin="anonymous"></script>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -21,7 +21,7 @@
     <header>
       <div class="links">
         <img src="./images/logo.svg" alt="Logo">
-        <img class="hamburger" src="./images/icon-hamburger.svg" alt="hamburger Image">
+        <img class="hamburger" src="./images/icon-hamburger.svg" alt="hamburger Image" id="hamburger">
         <div class="nav">
           <ul>
             <li>About</li>
@@ -30,16 +30,27 @@
             <li class="contact">Contact</li>
           </ul>
         </div>
-      </div>
+      </div>      
       
-      <h1>We are creatives</h1>
-      <img class="arrow" src="./images/icon-arrow-down.svg" alt="Arrow Down Icon">
+        <div class="menu menuVisible" id="menu">
+            <ul>
+              <li>About</li>
+                <li>Services</li>
+                <li>Projects</li>
+                <li class="menuContact">Contact</li>
+            </ul>                     
+        </div>
+      
+      
+      
+      <h1 id="creatives" class="creatives">We are creatives</h1>
+      <img class="arrow arrowVisible" id="arrow" src="./images/icon-arrow-down.svg" alt="Arrow Down Icon">
     </header>
 
     <div class="area">
       <img src="./images/mobile/image-transform.jpg" alt="Transform Imagen">
       
-      <div>
+      <div class="right">
         <h1>Transform your brand</h1>
         <p class="details">
           We are a full-service creative agency specializing in helping brands grow fast. 
@@ -54,7 +65,7 @@
     <div class="area reverse">
       <img src="./images/mobile/image-stand-out.jpg" alt="">
       
-      <div>
+      <div class="right">
         <h1>Stand out to the right audience</h1>
         <p class="details">
           Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters,
@@ -125,21 +136,22 @@
       <img src="./images/mobile/image-gallery-orange.jpg" alt="Orange">
       <img src="./images/mobile/image-gallery-cone.jpg" alt="Ice cream Cone">
       <img src="./images/mobile/image-gallery-sugar-cubes.jpg" alt="Sugar Cubes">
+      
     </section>
 
     <footer>
       <img class="logoFooter" src="./logoFooter.svg" alt="">
-      <ul>
+      <ul class="listFooter">
         <li>About</li>
         <li>Services</li>
         <li>Projects</li>   
       </ul>
 
       <div class="social">
-        <img src="/images/icon-facebook.svg" alt="Facebook Icon">
-        <img src="./images/icon-instagram.svg" alt="Instagram icon">
-        <img src="./images/icon-twitter.svg" alt="Twitter Icon">
-        <img src="./images/icon-pinterest.svg" alt="Pinterest Icon">
+        <i class="fab fa-facebook-square icono"></i>
+        <i class="fab fa-instagram icono"></i>
+        <i class="fab fa-twitter icono"></i>
+        <i class="fab fa-pinterest icono"></i>        
       </div>
       
       <div class="attribution">
@@ -150,5 +162,6 @@
     </footer>
     
   </main>
+  <script src="./sunny.js"></script>
 </body>
 </html>
